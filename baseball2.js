@@ -1,6 +1,13 @@
-function getRandomNumber() { // 3자리 수 랜덤 숫자 만들기
-    let number = Math.floor(Math.random() * 900) + 100;
-    return number.toString();
+function getRandomNumber() {
+    const numbers = [];
+
+    while (numbers.length < 3) {
+        const num = Math.floor(Math.random() * 10);
+        if (!numbers.includes(num)) {
+            numbers.push(num);
+        }
+    }
+    return numbers.join("");
 }
 
 function getGameResult(randomNum, userInput) { // 게임 결과 반환해주는 함수
@@ -53,7 +60,6 @@ const rl = readline.createInterface({   // 객체 생성
 // main 
 function startBaseballGame(count) {
     const randomNum = getRandomNumber(); // 랜덤 숫자 만들기
-    console.log(randomNum); ///
     console.log('컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!');
     
     getUserInput(count);
