@@ -23,19 +23,19 @@ function randomNum() {
 function gameResult(pcInput,userInput) {
     let strike = 0;
     let ball = 0;
+    let count = 0;
     let pc = randomNum();
     
     // console.log('pc',pc)
     rl.on("line", function(userInput) {  
     //숫자의 값과 위치가 모두 일치하면 S
     for(let i=0; i < 3; i++){ // 0 
-        for(let j = 0; j < 3 ; j++){ // 0
+        for(let j = 0; j < 3 ; j++){ 
             // pc.charAt(i)===userInput.charAt(j) && i === j
             // ? strike++
             // : ball++
-
             // if(pcInput[i]===userInput[j]){
-            if(pc.charAt(i)===userInput.charAt(j)){ // 숫자 자체가 같은지 확인 
+            if(pc.charAt(i)===userInput.charAt(j)){ //숫자가 같은지 확인 
                 if(i === j){ // 위치도 같은지 확인 
                     strike++
                 }else{
