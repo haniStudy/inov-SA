@@ -23,6 +23,7 @@ function randomNum() {
 function gameResult(pcInput,userInput) {
     let strike = 0;
     let ball = 0;
+    let count = 0;
     let pc = randomNum();
     
     // console.log('pc',pc)
