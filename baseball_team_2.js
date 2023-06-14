@@ -50,6 +50,7 @@ function getResult(value, Unit) {
 
 var count = 1;                      // 사용자 시도 횟수
 var randomNum = getRandomNumber();  // 무작위 3자리 숫자
+console.log('컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!');
 var startBaseballGame = function () {
     rl.question(count + '번째 시도 : ', function (input) {
 
